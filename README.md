@@ -2,6 +2,12 @@
 
 Cross-server player loot sync hiving for DayZ. Reads and writes `players.db` SQLite files directly — no networking required, no extra dependencies beyond the Python standard library. This allows players to join a server collect loot, adventure, etc. and then switch to another hive server and maintain their loot, while keeping coords specific to a given server.
 
+To see a working example you can checkout these servers which are hived together using this script:
+```
+Not so friendly in cherno... | VNLA+ | HIVED | AI | HELIS | discord.gg/C9Rm73V5HM
+Not so friendly in vorkuta... | VNLA+ | HIVED | AI | HELIS | discord.gg/C9Rm73V5HM
+```
+
 ---
 
 ## How it works
