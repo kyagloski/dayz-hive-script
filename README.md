@@ -68,13 +68,13 @@ When updating an existing player, bytes 0–15 are **never recalculated or re-en
 ### 1. Clone or download
 
 ```bash
-git clone https://github.com/yourname/dayz-loot-sync.git
-cd dayz-loot-sync
+git clone https://github.com/kyagloski/dayz-hive-script.git
+cd dayz-hive-script
 ```
 
 ### 2. Edit the config block
 
-Open `dayz_loot_sync.py` and fill in the `CONFIG` section at the top:
+Open `hive_players.py` and fill in the `CONFIG` section at the top:
 
 ```python
 CONFIG = {
@@ -123,7 +123,7 @@ And then run that bash script as a cron job with this
 Before running a full sync, confirm the position decoder is reading sensible values from your DB:
 
 ```bash
-python dayz_loot_sync.py --dump /path/to/players.db
+python hive_players.py --dump /path/to/players.db
 ```
 
 Output:
@@ -143,16 +143,16 @@ If the coordinates look wildly off (negative millions, NaN, etc.) your blob offs
 
 ```bash
 # Run once and exit
-python dayz_loot_sync.py
+python hive_players.py
 
 # Run every 60 seconds (recommended for a live cluster)
-python dayz_loot_sync.py --watch 60
+python hive_players.py --watch 60
 
 # Preview what would change without writing anything
-python dayz_loot_sync.py --dry-run
+python hive_players.py --dry-run
 
 # Decode and print player positions from a single DB
-python dayz_loot_sync.py --dump /path/to/players.db
+python hive_players.py --dump /path/to/players.db
 ```
 
 ---
